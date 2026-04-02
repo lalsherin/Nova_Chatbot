@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nova-chatbot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+        placeholder: "Paste your Groq API key here"
+      - key: PORT
+        value: 3000
